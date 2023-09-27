@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaker</title>
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <script src="./script/index.js" defer></script>
+</head>
+<body>
+    <div class="loader">
+        <!-- <img src="./image/loader_gif.gif" /> -->
+        <h1>Loading animaker...</h1>
+    </div>
+    <div class="animaker-container" style="display: none;">
+        <div class="animaker-content">
+            <div class="animation-action-container">
+                <div class="animation-action-content">
+                    <div class="animation-action-frame">
+                        <strong>ANIMATION & ACTION</strong>
+                    </div>
+                    <div class="animation-controller">
+                        <select id="select-animation">
+                            <option value="#choose">Choose</option>
+                            <option value="#sliding" class="opt-sliding">(Sliding Animation)</option>
+                            <option value="slide-top">-Slide top</option>
+                            <option value="slide-bottom">-Slide bottom</option>
+                            <option value="slide-left">-Slide left</option>
+                            <option value="slide-right">-Slide right</option>
+                            <option value="" class="opt-zoom">(Zoom Appear)</option>
+                            <option value="zoom-in">-Zoom in</option>
+                            <option value="zoom-out">-Zoom out</option>
+                            <option value="" class="opt-other">(Others Appear)</option>
+                            <option value="fade-in">-Fade in</option>
+                            <option value="fade-out">-Fade out</option>
+                            <option value="rotate">-Rotate</option>
+                        </select>
+                    </div>
+                    <div class="btn-action">
+                        <div class="refresh-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-arrow-clockwise" viewBox="0 0 16 16" onclick="refreshIcon()">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                              </svg>
+                        </div>
+                        <button id="btn-apply">Apply</button>
+                    </div>
+                </div>
+            </div>
+            <div class="frame">
+                <div class="get-source-code" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16" onclick="getCode()">
+                        <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708z"/>
+                      </svg>
+                </div>
+                <img src="./image/css_awesome_logo.webp" id="img-animation-act">
+            </div>
+        </div>
+    </div>
+    <div class="modal-get-code-container" style="display: none;">
+        <h1>CSS CODE:</h1>
+        <input type="text" id="result-code" oncopy="copyCode()">
+    </div>
+</body>
+</html>
